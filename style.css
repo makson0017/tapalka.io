@@ -6,14 +6,26 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    justify-content: flex-start; /* Выровнять элементы по левому краю */
+    justify-content: center; /* Выровнять элементы по центру */
     align-items: center;
     background: linear-gradient(135deg, #1a1a1a, #3d3d3d); /* Градиентный фон */
     overflow: hidden; /* Убираем прокрутку */
 }
 
+.container {
+    display: flex; /* Располагаем изображение и текст в ряд */
+    align-items: center; /* Выравниваем по центру по вертикали */
+}
+
 .image {
-    width: 150px; /* Ширина изображения (измените по необходимости) */
+    width: 250px; /* Увеличьте ширину изображения по необходимости */
     height: auto; /* Автоматическая высота для сохранения пропорций */
-    margin: 20px; /* Отступ от краев */
+    margin-right: 20px; /* Отступ между изображением и текстом */
+}
+
+.text {
+    font-size: 24px; /* Размер шрифта */
+    color: white; /* Цвет текста */
+    font-family: 'Arial', sans-serif; /* Красивый шрифт (можете изменить на другой) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
 }
