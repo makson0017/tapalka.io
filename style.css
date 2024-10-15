@@ -38,3 +38,5 @@ body {
 .circle:active {
     transform: scale(0.9); /* Уменьшаем круг при нажатии */
 }
+
+}
