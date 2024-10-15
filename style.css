@@ -10,6 +10,7 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #1a1a1a, #3d3d3d); /* Градиентный фон */
     font-family: 'Arial', sans-serif; /* Шрифт */
+    overflow: hidden; /* Убираем прокрутку */
 }
 
 .container {
@@ -26,7 +27,10 @@ body {
     width: 120px; /* Ширина круга */
     height: 120px; /* Высота круга */
     border-radius: 50%; /* Закругляем углы для круга */
+    background-color: #f39c12; /* Цвет круга */
     animation: colorChange 3s infinite alternate; /* Анимация изменения цвета */
+    position: absolute; /* Позиционирование относительно окна */
+    transform: translate(-50%, -50%); /* Центрируем круг по курсору */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень для круга */
     cursor: pointer; /* Курсор указывает на интерактивный элемент */
 }
@@ -41,9 +45,4 @@ body {
     100% {
         background-color: #3498db; /* Конечный цвет */
     }
-}
-
-.circle:active {
-    transform: scale(0.9); /* Уменьшаем круг при нажатии */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Уменьшаем тень при нажатии */
 }
