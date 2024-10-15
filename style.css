@@ -12,4 +12,10 @@ body {
     height: 100px; /* Высота круга */
     background-color: yellow; /* Желтый цвет */
     border-radius: 50%; /* Закругляем углы для круга */
+    transition: transform 0.1s; /* Плавный переход для трансформации */
+    cursor: pointer; /* Курсор указывает на интерактивный элемент */
+}
+
+.circle:active {
+    transform: scale(0.9); /* Уменьшаем круг при нажатии */
 }
