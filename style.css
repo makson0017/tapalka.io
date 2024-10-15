@@ -25,15 +25,25 @@ body {
 .circle {
     width: 120px; /* Ширина круга */
     height: 120px; /* Высота круга */
-    background-color: #f39c12; /* Желтый цвет */
     border-radius: 50%; /* Закругляем углы для круга */
+    animation: colorChange 3s infinite alternate; /* Анимация изменения цвета */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень для круга */
-    transition: transform 0.1s, box-shadow 0.2s; /* Плавный переход для трансформации и тени */
     cursor: pointer; /* Курсор указывает на интерактивный элемент */
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #f39c12; /* Начальный цвет */
+    }
+    50% {
+        background-color: #e74c3c; /* Цвет в середине анимации */
+    }
+    100% {
+        background-color: #3498db; /* Конечный цвет */
+    }
 }
 
 .circle:active {
     transform: scale(0.9); /* Уменьшаем круг при нажатии */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Уменьшаем тень при нажатии */
 }
-
