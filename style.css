@@ -25,7 +25,7 @@ body {
 
 .text {
     font-size: 30px; /* Размер шрифта */
-    color: #FFB6C1; /* Нежно-розовый цвет */
+    color: #FFB6C1; /* Нежно-розовый цвет текста */
     font-family: 'Courier New', Courier, monospace; /* Красивый шрифт (можете изменить на другой) */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
     max-width: 400px; /* Максимальная ширина текста (по желанию) */
