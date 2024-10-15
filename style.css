@@ -2,9 +2,28 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
     justify-content: center;
     align-items: center;
     background-color: #333; /* Темно-серый цвет */
+}
+
+.button-container {
+    margin-bottom: 20px; /* Отступ между кнопками и кругом */
+}
+
+.btn {
+    background-color: transparent; /* Прозрачный фон */
+    border: 2px solid black; /* Черная обводка */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    margin: 0 5px; /* Отступы между кнопками */
+    cursor: pointer; /* Курсор указывает на интерактивный элемент */
+    transition: background-color 0.3s; /* Плавный переход для цвета фона */
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Цвет фона при наведении */
 }
 
 .circle {
