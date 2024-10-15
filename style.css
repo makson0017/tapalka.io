@@ -1,42 +1,39 @@
+* {
+    box-sizing: border-box; /* Упрощаем работу с отступами и размерами */
+}
+
 body {
     margin: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Вертикальное расположение элементов */
     justify-content: center;
     align-items: center;
-    background-color: #333; /* Темно-серый цвет */
+    background: linear-gradient(135deg, #1a1a1a, #3d3d3d); /* Градиентный фон */
+    font-family: 'Arial', sans-serif; /* Шрифт */
 }
 
-.button-container {
-    margin-bottom: 20px; /* Отступ между кнопками и кругом */
+.container {
+    text-align: center; /* Центрируем текст */
 }
 
-.btn {
-    background-color: transparent; /* Прозрачный фон */
-    border: 2px solid black; /* Черная обводка */
-    color: white; /* Цвет текста */
-    padding: 10px 20px; /* Отступы внутри кнопки */
-    margin: 0 5px; /* Отступы между кнопками */
-    cursor: pointer; /* Курсор указывает на интерактивный элемент */
-    transition: background-color 0.3s; /* Плавный переход для цвета фона */
-}
-
-.btn:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Цвет фона при наведении */
+.title {
+    color: #f1c40f; /* Цвет заголовка */
+    font-size: 2.5em; /* Размер шрифта заголовка */
+    margin-bottom: 20px; /* Отступ между заголовком и кругом */
 }
 
 .circle {
-    width: 100px; /* Ширина круга */
-    height: 100px; /* Высота круга */
-    background-color: yellow; /* Желтый цвет */
+    width: 120px; /* Ширина круга */
+    height: 120px; /* Высота круга */
+    background-color: #f39c12; /* Желтый цвет */
     border-radius: 50%; /* Закругляем углы для круга */
-    transition: transform 0.1s; /* Плавный переход для трансформации */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень для круга */
+    transition: transform 0.1s, box-shadow 0.2s; /* Плавный переход для трансформации и тени */
     cursor: pointer; /* Курсор указывает на интерактивный элемент */
 }
 
 .circle:active {
     transform: scale(0.9); /* Уменьшаем круг при нажатии */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Уменьшаем тень при нажатии */
 }
 
-}
