@@ -8,8 +8,18 @@ body {
     display: flex;
     justify-content: center; /* Выровнять элементы по центру */
     align-items: center;
-    background: linear-gradient(135deg, #1a1a1a, #3d3d3d); /* Градиентный фон */
+    position: relative; /* Относительное позиционирование для фона */
     overflow: hidden; /* Убираем прокрутку */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Положение фона ниже остальных элементов */
+    overflow: hidden; /* Убираем прокрутку для фона */
 }
 
 .container {
@@ -32,6 +42,47 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
     max-width: 400px; /* Максимальная ширина текста (по желанию) */
 }
+
+/* Анимация для звёздочек и сердечек */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.star, .heart {
+    position: absolute;
+    animation: fall linear infinite; /* Звёздочки и сердечки будут падать бесконечно */
+}
+
+.star {
+    color: #FFFACD; /* Нежно-жёлтый цвет */
+    font-size: 12px; /* Размер звёздочек */
+}
+
+.heart {
+    color: #E6E6FA; /* Нежно-фиолетовый цвет */
+    font-size: 16px; /* Размер сердечек */
+}
+
+/* Генерация звёздочек */
+.star:nth-child(1) { top: -10%; left: 10%; animation-duration: 5s; }
+.star:nth-child(2) { top: -10%; left: 30%; animation-duration: 7s; }
+.star:nth-child(3) { top: -10%; left: 50%; animation-duration: 6s; }
+.star:nth-child(4) { top: -10%; left: 70%; animation-duration: 8s; }
+.star:nth-child(5) { top: -10%; left: 90%; animation-duration: 5s; }
+
+/* Генерация сердечек */
+.heart:nth-child(6) { top: -5%; left: 20%; animation-duration: 4s; }
+.heart:nth-child(7) { top: -5%; left: 40%; animation-duration: 6s; }
+.heart:nth-child(8) { top: -5%; left: 60%; animation-duration: 5s; }
+.heart:nth-child(9) { top: -5%; left: 80%; animation-duration: 7s; }
+.heart:nth-child(10) { top: -5%; left: 50%; animation-duration: 9s; }
 
 /* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
