@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Добавлен viewport для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация круга</title>
     <link rel="stylesheet" href="style.css">
-    <title>Изображение и надпись</title>
 </head>
 <body>
-    <div class="background"></div> <!-- Фоновый слой -->
-    <div class="container">
-        <img src="photo_2024-10-08_19-25-05.jpg" alt="Diana" class="image" id="image">
-        <h1 class="text">Дианочка, ты как обычно люкс.</h1> <!-- Надпись справа от изображения -->
-    </div>
-    <script src="script.js"></script>
+    <div class="circle" onclick="incrementCounter()"></div>
+
+    <script>
+        function incrementCounter() {
+            const circle = document.querySelector('.circle');
+            const incrementText = document.createElement('div');
+            incrementText.classList.add('increment');
+            incrementText.textContent = '+1';
+            circle.appendChild(incrementText);
+
+            setTimeout(() => {
+                incrementText.remove();
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
